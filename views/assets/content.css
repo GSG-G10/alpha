@@ -1,0 +1,213 @@
+:root {
+  --body: rgba(216, 216, 216);
+}
+
+body.dark {
+  --body: rgb(59, 59, 59);
+  background: var(--body);
+}
+body {
+  background: var(--body);
+  transition: all 0.3s ease-in-out;
+  color: #000;
+}
+
+header {
+  background: var(--body);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.253);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 30px;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
+body.dark header {
+  box-shadow: 0 1px 5px rgba(224, 224, 224, 0.466);
+}
+
+.bowl_add_post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    width: 40%;
+    /* width: 25%; */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.466);
+  border-radius: 4px;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+body.dark .bowl_add_post {
+  box-shadow: 0 1px 5px rgba(224, 224, 224, 0.466);
+}
+
+.bowl_add_post input {
+  width: 80%;
+  outline: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  background: none;
+}
+
+body.dark .bowl_add_post input::placeholder {
+  color: #fff;
+}
+.bowl_add_post img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bowl_add_post svg {
+  width: 35px;
+  height: 35px;
+  fill: #000;
+}
+
+body.dark .bowl_add_post svg {
+  fill: rgb(226, 226, 226);
+}
+
+
+
+
+.logo {
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+body.dark .logo{
+  color: #fff;
+
+}
+.dark_mode {
+  cursor: pointer;
+}
+
+.dark_mode svg {
+  width: 40px;
+  height: 40px;
+}
+
+.cancel {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background: rgb(216, 214, 214);
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  width: 30px;
+  fill: rgb(0, 0, 0);
+  height: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.card_post {
+  width: 500px;
+  position: relative;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 8px 0.5px rgba(0, 0, 0, 0.35);
+}
+
+
+.text_post {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.image_post {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body.dark .text_post{
+  color: #fff;
+
+}
+.image_post img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.count_likes {
+  background: rgba(0, 0, 0, 0.521);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.count_likes img {
+  width: 30px;
+  height:30px;
+  padding-left: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px){
+  
+
+  .card_post {
+    width:90%;
+  }
+  
+  .bowl_add_post {
+    width: 60%;
+  }
+
+  .bowl_add_post img {
+    width: 40px;
+    height: 40px;
+
+  }
+  
+  .bowl_add_post svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+}
+
+
+
+.OpenPost{
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  padding: 5px;
+  background: cornflowerblue;
+}
+
+
+

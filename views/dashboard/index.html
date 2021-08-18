@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" type="image/x-icon" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <div class="table">
+        <div class="row titles">
+            <div class="col"><span>ID</span></div>
+            <div class="col"><span>Text </span></div>
+            <div class="col"><span>Link img</span></div>
+            <div class="col"><span>Likes</span></div>
+        </div>
+    </div>
+</main>
+
+<script>
+    console.log("dashboard");
+    const main = document.querySelector('main')
+        fetch('/dashboard/getdashboard').then(getDB=>{
+            return getDB.json()
+        }).then(data=>{
+            console.log(data);
+            // tableData(data)
+        }).catch(console.error)
+        
+   let lists = [{
+        "id": "112",
+        "user_id": "22",
+        "text": "https://i2.wp.com/www.dailycal.org/assets/uploads/2021/08/animeMadhouse-Nippon-Television-Network-NTV-Shueisha-Video-Audio-Project-VAP.jpg?ssl=1&resize=900%2C580",
+        "link_img": "https://i2.wp.com/www.dailycal.org/assets/uploads/2021/08/animeMadhouse-Nippon-Television-Network-NTV-Shueisha-Video-Audio-Project-VAP.jpg?ssl=1&resize=900%2C580",
+        "likes": "0"
+    },
+    {
+        "id": "108",
+        "user_id": "22",
+        "text": "33333333",
+        "link_img": "",
+        "likes": "335"
+    },
+    {
+        "id": "111",
+        "user_id": "22",
+        "text": "dsgsdgs",
+        "link_img": "https://i2.wp.com/www.dailycal.org/assets/uploads/2021/08/animeMadhouse-Nippon-Television-Network-NTV-Shueisha-Video-Audio-Project-VAP.jpg?ssl=1&resize=900%2C580",
+        "likes": "18"
+    },
+    {
+        "id": "107",
+        "user_id": "22",
+        "text": "2222222",
+        "link_img": "",
+        "likes": "15"
+    },
+    {
+        "id": "106",
+        "user_id": "22",
+        "text": "sdgsdgsdg",
+        "link_img": "",
+        "likes": "16"
+    },
+    {
+        "id": "109",
+        "user_id": "22",
+        "text": "++++++++++++++ #  #  # ",
+        "link_img": "",
+        "likes": "20"
+    },
+    {
+        "id": "110",
+        "user_id": "22",
+        "text": "asasasfas",
+        "link_img": "",
+        "likes": "37"
+    },
+    {
+        "id": "113",
+        "user_id": "22",
+        "text": "sdgdshsdsd.\r\nsdh\r\nsdh\r\nsd\r\nhds\r\nhshdsh",
+        "link_img": "https://i.pinimg.com/originals/61/f1/d9/61f1d99c883a79eccce91874c166ae06.jpg",
+        "likes": "0"
+    }
+]
+tableData(lists)
+    function tableData(data){
+        for (let i = 0; i < data.length; i++) {
+            main.innerHTML +=`
+            <div class="rows">
+            <div class="cell id">
+                <span>${data[i].id}</span>
+            </div>
+            <div class="cell text">
+                <span>${data[i].text}</span>
+            </div>
+            <div class="cell link_img">
+                <span>${data[i].link_img}</span>
+            </div>
+            <div class="cell likes">
+                <span>${data[i].likes}</span>
+            </div>
+        </div>
+        `
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

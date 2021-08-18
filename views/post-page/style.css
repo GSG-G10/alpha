@@ -1,0 +1,15 @@
+
+.back_home{
+    background-color: rgb(155, 151, 151);
+    width: 50px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.back_home svg{
+    width: 40px;
+    height:40px;
+}
