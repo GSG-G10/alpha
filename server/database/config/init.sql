@@ -8,7 +8,7 @@ fname VARCHAR(100) NOT NULL);
 
 CREATE TABLE posts(
 id BIGSERIAL PRIMARY KEY NOT NULL,
-user_id VARCHAR(100) NOT NULL,
+-- user_id VARCHAR(100) NOT NULL,
 text VARCHAR(500) NOT NULL,
 link_img VARCHAR(TEXT) NOT NULL,
 likes VARCHAR(10) NOT NULL);
@@ -21,7 +21,8 @@ INSERT INTO users (username, fname) VALUES ('divluffy', 'ibrahim jomaa');
 INSERT INTO users (username, fname) VALUES ('sabbah', 'ahmad sabah');
 INSERT INTO users (username, fname) VALUES ('mostafa', 'mostafa mnoon');
 INSERT INTO users (username, fname) VALUES ('ahmed', 'ahmad qadura');
-INSERT INTO posts (user_id, text, link_img, likes) VALUES (22 , 'this is text default about  this image', '../storage/0.jpg' , 540);
+-- INSERT INTO posts (text, link_img, likes) VALUES ('', '' , 0);
+INSERT INTO posts (text, link_img, likes) VALUES ('this is text default about  this image', 'https://i.pinimg.com/originals/61/f1/d9/61f1d99c883a79eccce91874c166ae06.jpg' , 964);
 INSERT INTO profile (post_id) VALUES (1);
 
 

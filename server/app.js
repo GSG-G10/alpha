@@ -3,7 +3,7 @@
 const express = require('express')
 const router = express.Router();
 const path = require('path')
-const getData = require('./database/queries/get-data.js');
+const getData = require('/database/queries/get-data.js');
 const postData = require('./database/queries/post-data.js');
 const addLikes = require('./database/queries/add-likes.js');
 
